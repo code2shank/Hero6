@@ -1,14 +1,17 @@
-<div class="card card-header">
+<div class="card card-header" *ngIf="messageService.messages.length">
   <h3>Messages Component</h3>
 </div>
 
 <div class="card card-body">
-
-
+  <ul *ngFor="let message of messageService.messages">
+    <li>
+      {{message}}
+    </li>
+  </ul>
 </div>
 
 <div class="card card-footer">
-
+  <button class="btn btn-info" (click)="messageService.clear()">Clear</button>
 </div>
 
 
