@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, DebugElement } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+
+  e: any;
+   
+  activate(e) {
+    this.e = e.target['innerHTML'];
+    console.log(e);
+    console.log(e.target['innerHTML']);
+  }
+
 }
