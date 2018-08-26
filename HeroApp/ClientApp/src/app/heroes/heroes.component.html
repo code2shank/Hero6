@@ -3,18 +3,19 @@
 
 
 <!--uncomment if you want to see 2-way bidning-->
-<div class="border-bottom">
-  <div>
-    <label>
+<div class="border-bottom ">
+  <div class="row mb-1">
+    <label class="col-6" for="id">
       ID:
-      <input [(ngModel)]="hero.id" placeholder="ID">
     </label>
+      <input [(ngModel)]="hero.id" placeholder="ID" class="col-auto" name="id">
   </div>
-  <div>
-    <label>
+  <div class="row mb-1">
+    <label class="col-6" for="name">
       Name:
-      <input [(ngModel)]="hero.name" placeholder="name">
     </label>
+      <input [(ngModel)]="hero.name" placeholder="name" class="col-auto" name="name">
+   
   </div>
 </div>
 
