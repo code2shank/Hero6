@@ -1,13 +1,7 @@
 <h3>Heroes Component</h3>
 
-
 <h5>Click a Hero To see who you selected | Event Binding</h5>
-<div *ngIf="selectedHero">
-  <div class="heroes">
-    <span class="badge">ID : {{selectedHero.id}}</span>
-     Name : {{selectedHero.name}}
-  </div>
-</div>
+<!--Hero -Detail Component-->
 
 <h2>My Heroes List</h2>
 <ul *ngFor="let hero of heroes" class="list-unstyled heroes">
@@ -16,6 +10,8 @@
   </li>
 </ul>
 
+<h5 *ngIf="selectedHero" >You have selected: </h5>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 
 
 <!--uncomment if you want to see 2-way binding-->
