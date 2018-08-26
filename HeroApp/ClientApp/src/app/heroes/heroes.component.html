@@ -1,15 +1,28 @@
 <h3>Heroes Component</h3>
-<div>
-  <label>
-    Name:
-    <input [(ngModel)]="hero.name" placeholder="name">
-  </label>
-</div>
+<h4>Two - Way Binding illlustrated</h4>
 
 
-<div>
-  <h4>ID: </h4> <p>{{hero.id}}</p>
+<!--uncomment if you want to see 2-way bidning-->
+<div class="border-bottom">
+  <div>
+    <label>
+      ID:
+      <input [(ngModel)]="hero.id" placeholder="ID">
+    </label>
+  </div>
+  <div>
+    <label>
+      Name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
 </div>
-<div>
-  <h4>Name: </h4> <p>{{hero.name}}</p>
+
+<div class="row">
+  <p class="col-6">ID :</p>
+  <p class="col-6"> {{hero.id}}</p>
+</div>
+<div class="row">
+  <p class="col-6">Name :</p>
+  <p class="col-6">{{hero.name}}</p>
 </div>
