@@ -1,21 +1,38 @@
 <h3>Heroes Component</h3>
-<h4>Two - Way Binding illlustrated</h4>
 
 
-<!--uncomment if you want to see 2-way bidning-->
+<h5>Click a Hero To see who you selected | Event Binding</h5>
+<div *ngIf="selectedHero">
+  <div class="heroes">
+    <span class="badge">ID : {{selectedHero.id}}</span>
+     Name : {{selectedHero.name}}
+  </div>
+</div>
+
+<h2>My Heroes List</h2>
+<ul *ngFor="let hero of heroes" class="list-unstyled heroes">
+  <li [class.selected]="hero==selectedHero" (click)="onSelect(hero)">
+    <span class="badge">ID : {{hero.id}}</span> Name : {{hero.name}}
+  </li>
+</ul>
+
+
+
+<!--uncomment if you want to see 2-way binding-->
+<!--<h4>Two - Way Binding illlustrated</h4>
 <div class="border-bottom ">
   <div class="row mb-1">
     <label class="col-6" for="id">
       ID:
     </label>
-      <input [(ngModel)]="hero.id" placeholder="ID" class="col-auto" name="id">
+    <input [(ngModel)]="hero.id" placeholder="ID" class="col-auto" name="id">
   </div>
   <div class="row mb-1">
     <label class="col-6" for="name">
       Name:
     </label>
-      <input [(ngModel)]="hero.name" placeholder="name" class="col-auto" name="name">
-   
+    <input [(ngModel)]="hero.name" placeholder="name" class="col-auto" name="name">
+
   </div>
 </div>
 
@@ -26,4 +43,4 @@
 <div class="row">
   <p class="col-6">Name :</p>
   <p class="col-6">{{hero.name}}</p>
-</div>
+</div>-->
