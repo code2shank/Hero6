@@ -1,17 +1,27 @@
-<h3>Heroes Component</h3>
+<div class="card card-header">
+  <h3>Heroes Component</h3>
+</div>
 
-<h5>Click a Hero To see who you selected | Event Binding</h5>
-<!--Hero -Detail Component-->
+<div class="card card-body">
+  <h5>Click a Hero To see who you selected | Event Binding</h5>
 
-<h2>My Heroes List</h2>
-<ul *ngFor="let hero of heroes" class="list-unstyled heroes">
-  <li [class.selected]="hero==selectedHero" (click)="onSelect(hero)">
-    <span class="badge">ID : {{hero.id}}</span> Name : {{hero.name}}
-  </li>
-</ul>
+  <div class="card card-columns">
+    <h2>My Heroes List</h2>
+    <ul *ngFor="let hero of heroes" class="list-unstyled heroes">
+      <li [class.selected]="hero==selectedHero" (click)="onSelect(hero)">
+        <span class="badge">ID : {{hero.id}}</span> Name : {{hero.name}}
+      </li>
+    </ul>
+  </div>
+ 
+</div>
 
-<h5 *ngIf="selectedHero" >You have selected: </h5>
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<div class="card card-footer">
+  <h5 *ngIf="selectedHero">You have selected: </h5>
+  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+</div>   
+
+
 
 
 <!--uncomment if you want to see 2-way binding-->
