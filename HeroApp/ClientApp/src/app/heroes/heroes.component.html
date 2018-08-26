@@ -1,5 +1,15 @@
-<p>
-  heroes works!
-</p>
+<h3>Heroes Component</h3>
+<div>
+  <label>
+    Name:
+    <input [(ngModel)]="hero.name" placeholder="name">
+  </label>
+</div>
 
-{{hero.id}} : {{hero.name}}
+
+<div>
+  <h4>ID: </h4> <p>{{hero.id}}</p>
+</div>
+<div>
+  <h4>Name: </h4> <p>{{hero.name}}</p>
+</div>
